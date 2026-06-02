@@ -93,8 +93,8 @@ Creates a new user account.
 
 ```json
 {
-  "name": "John Doe",
-  "email": "john@example.com",
+  "name": "Anand singh",
+  "email": "anand@example.com",
   "password": "password123"
 }
 ```
@@ -118,7 +118,7 @@ Authenticates a user and returns a JWT token.
 
 ```json
 {
-  "email": "john@example.com",
+  "email": "anand@example.com",
   "password": "password123"
 }
 ```
@@ -230,7 +230,7 @@ GET /books/OL82563W
 ## Clone Repository
 
 ```bash
-git clone https://github.com/your-username/book-store-mern.git
+git clone https://github.com/Engineer-anand/book-store-mern.git
 ```
 
 ---
@@ -291,7 +291,7 @@ mongodb://localhost:27017/bookstore
 * Email Verification
 * Admin Dashboard
 * Pagination and Filters
-* Dark Mode Support
+
 
 ---
 
@@ -311,7 +311,7 @@ This project helped strengthen knowledge of:
 
 # Author
 
-Anand Singh
+Anand Kushwaha
 
 B.Tech Computer Science Engineering
 
