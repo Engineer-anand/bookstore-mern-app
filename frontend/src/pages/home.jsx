@@ -34,10 +34,11 @@ function Home() {
           return;
         }
 
-        const apiKey = 'AIzaSyAmmviEZiZ6NbD5E_JugyuLbugtAuEFlg4';
-        const response = await axios.get(
-          `https://www.googleapis.com/books/v1/volumes?q=${search}&key=${apiKey}&maxResults=40`
-        );
+        const apiKey = import.meta.env.VITE_GOOGLE_BOOKS_API_KEY;
+        const requestUrl = apiKey
+          ? `https://www.googleapis.com/books/v1/volumes?q=${encodeURIComponent(search)}&key=${apiKey}&maxResults=40`
+          : `https://www.googleapis.com/books/v1/volumes?q=${encodeURIComponent(search)}&maxResults=40`;
+        const response = await axios.get(requestUrl);
         setBooksData(response.data.items || []);
       } catch (error) {
         console.error('Error fetching books:', error);

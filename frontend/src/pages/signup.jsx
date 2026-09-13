@@ -7,6 +7,7 @@ import { handleError } from './../toastUtils';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faEnvelope, faLock, faUser } from '@fortawesome/free-solid-svg-icons';
 import BG from './component/models/bg'
+import { API_BASE_URL } from '../config';
 
 
 function Signup() {
@@ -24,7 +25,7 @@ function Signup() {
         }
 
         try {
-            const url = "http://localhost:5000/signup";
+            const url = `${API_BASE_URL}/signup`;
             const res = await fetch(url, {
                 method: "POST",
                 headers: {

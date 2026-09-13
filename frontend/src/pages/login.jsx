@@ -6,6 +6,7 @@ import 'react-toastify/dist/ReactToastify.css'; // Ensure Toastify styles are
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faEnvelope, faLock } from '@fortawesome/free-solid-svg-icons';
 import BG from './component/models/bg'
+import { API_BASE_URL } from '../config';
 function Login() {
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
@@ -19,7 +20,7 @@ function Login() {
         }
 
         try {
-            const url = "http://localhost:5000/login";
+            const url = `${API_BASE_URL}/login`;
 
             const res = await fetch(url, {
                 method: "POST",

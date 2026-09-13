@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import './forgot.css'; // Add relevant styles for this page
 import { Link } from 'react-router-dom';
 import { ToastContainer, toast } from 'react-toastify';
+import { API_BASE_URL } from '../config';
 import 'react-toastify/dist/ReactToastify.css';
 
 function ForgotPassword() {
@@ -15,7 +16,7 @@ function ForgotPassword() {
         }
 
         try {
-            const url = "http://localhost:5000/forgot-password";
+            const url = `${API_BASE_URL}/forgot-password`;
 
             const res = await fetch(url, {
                 method: "POST",

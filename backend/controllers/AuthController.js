@@ -34,7 +34,7 @@ const signup = async (req, res) => {
 };
 
 const login = async (req, res) => {
-     const secret ="anand@12345"
+    const secret = process.env.JWT_SECRET || "your_jwt_secret_key_here";
     try {
         const { email, password } = req.body;
 

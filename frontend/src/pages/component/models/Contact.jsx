@@ -10,8 +10,8 @@ function Contact() {
             <div className="contact-container">
                 <h1>Contact Us</h1>
                 <p>If you have any questions, feel free to reach out to us via email:</p>
-                <a  className="contact-email">
-                    anand.engineer.ak@gmail.com
+                <a href="mailto:support@example.com" className="contact-email">
+                    support@example.com
                 </a>
             </div>
             <DropDown/>

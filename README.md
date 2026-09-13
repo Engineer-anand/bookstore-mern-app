@@ -93,8 +93,8 @@ Creates a new user account.
 
 ```json
 {
-  "name": "Anand singh",
-  "email": "anand@example.com",
+  "name": "John Doe",
+  "email": "user@example.com",
   "password": "password123"
 }
 ```
@@ -118,7 +118,7 @@ Authenticates a user and returns a JWT token.
 
 ```json
 {
-  "email": "anand@example.com",
+  "email": "user@example.com",
   "password": "password123"
 }
 ```
@@ -230,7 +230,7 @@ GET /books/OL82563W
 ## Clone Repository
 
 ```bash
-git clone https://github.com/Engineer-anand/book-store-mern.git
+git clone https://github.com/Engineer-anand/bookstore-mern-app.git
 ```
 
 ---

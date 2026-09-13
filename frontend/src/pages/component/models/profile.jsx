@@ -4,6 +4,7 @@ import DropDown from './../Dropdown';
 import BackButton from './BackButton'; // Import BackButton component
 import { toast } from 'react-toastify';
 import BG from './bg';
+import { API_BASE_URL } from '../../../config';
 
 function Profile() {
     const [user, setUser] = useState({
@@ -35,7 +36,7 @@ function Profile() {
         }
 
         try {
-            const response = await fetch(`http://localhost:5000/update/${user.email}`, {
+            const response = await fetch(`${API_BASE_URL}/update/${user.email}`, {
                 method: 'PUT',
                 headers: {
                     'Content-Type': 'application/json',

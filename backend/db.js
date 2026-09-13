@@ -1,7 +1,8 @@
+require('dotenv').config();
 const mongoose = require('mongoose');
-// import {MongoDbURL} from './config.js'
-// const mongoURL = 'mongodb://localhost:27017/aniDB';
-mongoose.connect('mongodb://localhost:27017/bookstore');
+
+const mongoURL = process.env.MONGODB_URI || 'mongodb://localhost:27017/bookstore';
+mongoose.connect(mongoURL);
 
 const db = mongoose.connection;
 
